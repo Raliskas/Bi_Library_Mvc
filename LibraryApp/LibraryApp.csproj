@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>ddeeb10e-4f82-43fb-b6d5-16ce5cfe80b4</UserSecretsId>
+    <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="ClientApp\src\app\app.component.ts" />
+    <None Remove="ClientApp\src\app\app.module.ts" />
+    <None Remove="ClientApp\src\main.ts" />
+    <None Remove="ClientApp\src\polyfills.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.19" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\app.module.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\app.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\main.ts" />
+    <TypeScriptCompile Include="ClientApp\src\polyfills.ts" />
+  </ItemGroup>
+
+</Project>
